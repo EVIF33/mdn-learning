@@ -1,0 +1,34 @@
+body {
+  font-family: sans-serif;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: blod;
+  font-size: 200%;
+}
+
+.highlight2 {
+    background-color: red;
+    font-size: 400%;
+}
+
+span.highlight {
+    background-color: purple;
+    font-size: 100%;
+}
+
+.notebox {
+  border: 4px solid #666666;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.notebox.warning {
+  border-color: orange;
+  font-weight: bold;
+}
+
+.notebox.danger {
+  border-color: red;
+}

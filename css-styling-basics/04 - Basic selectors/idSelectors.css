@@ -1,0 +1,12 @@
+body {
+  font-family: sans-serif;
+}
+
+#one {
+  background-color: yellow;
+  font-size: 150%;
+}
+
+h1#heading {
+  color: rebeccapurple;
+}
