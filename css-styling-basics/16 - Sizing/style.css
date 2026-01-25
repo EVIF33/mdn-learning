@@ -1,0 +1,33 @@
+/* Example 1 */
+
+/* body {
+  font: 1.2em sans-serif;
+}
+.wrapper {
+  display: flex;
+}
+
+.wrapper > * {
+  margin: 20px;
+}
+
+.box {
+  border: 5px solid darkblue;
+  height: 100px;
+  width: 200px;
+} */
+
+/* Example 2 */
+
+/* body {
+  font: 1.2em sans-serif;
+  width: 50%;
+}
+
+.box {
+  border: 5px solid darkblue;
+  width: 50%;
+} */
+
+/* Example 3 */
+
