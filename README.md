@@ -12,6 +12,7 @@
 ## End Goal 
 - Learning repository → Professional portfolio with 100% original work
 
-<sub>Started with MDN's learning structure, now creating my own path.</sub>  
-<sub>Transforming inspiration into original work.</sub>  
-<sub>Last updated: March 2024</sub>
+---
+
+*Started with MDN's learning structure, now creating my own path.*  
+*Transforming inspiration into original work.* 
