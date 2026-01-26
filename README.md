@@ -1,14 +1,17 @@
-# MDN Learning Materials
+# My Web Development Learning Path - Under Reconstruction
 
-This repository contains my solutions to exercises and examples 
-from [MDN Web Docs](https://developer.mozilla.org/).
+## Current Status
+- Transition Phase: Converting tutorial-based code → Original projects
 
-## Purpose
-- Practice web development skills
-- Track learning progress
-- Build portfolio for potential employers
+## What I'm Doing Now
+- Rewriting all examples with my own code
+- Creating unique project implementations
+- Building personal portfolio pieces
+- Updating documentation and structure
 
-## Sources
-All exercises are taken from:
-- https://developer.mozilla.org/
-- License: Creative Commons Attribution-ShareAlike
+## End Goal 
+- Learning repository → Professional portfolio with 100% original work
+
+<sub>Started with MDN's learning structure, now creating my own path.</sub>  
+<sub>Transforming inspiration into original work.</sub>  
+<sub>Last updated: March 2024</sub>
