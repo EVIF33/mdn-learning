@@ -31,3 +31,41 @@
 
 /* Example 3 */
 
+/* body {
+  font: 1.2em sans-serif;
+  box-sizing: border-box;
+}
+.box {
+  border: 5px solid darkblue;
+  width: 200px;
+  margin: 10%;
+  padding: 10%;
+} */
+
+/* Example 4 */
+
+/* .box {
+  width: 200px;
+}
+.mini-box {
+  width: 30px;
+}
+.width {
+  width: 100%;
+}
+.max {
+  max-width: 100%;
+} */
+
+/* Example 5 */
+
+body {
+  font-family: sans-serif;
+}
+
+.box {
+  border: 5px solid darkblue;
+  width: 20vw;
+  height: 20vh;
+  font-size: 10vh;
+}
