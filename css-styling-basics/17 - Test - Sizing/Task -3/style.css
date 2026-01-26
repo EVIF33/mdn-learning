@@ -1,0 +1,15 @@
+body {
+  font: 1.2em / 1.5 sans-serif;
+  padding: 1em;
+}
+
+.box {
+  border: 5px solid black;
+  margin-bottom: 1em;
+  width: 500px;
+}
+
+img {
+  /* Add styles here */
+  max-width: 100%;
+}
