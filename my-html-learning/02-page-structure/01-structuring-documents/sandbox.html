@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox: Document Structure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+
+        .demo {
+            border-left: 4px solid green;
+            padding: 0 0 0 15px;
+            margin: 25px 0;
+        }
+
+        /* Simple styling for visualization */
+        header,
+        nav,
+        main,
+        aside,
+        footer,
+        article,
+        section {
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+        }
+
+        header {
+            background: #e3f2fd;
+        }
+
+        nav {
+            background: #f3e5f5;
+        }
+
+        main {
+            background: #e8f5e9;
+        }
+
+        article {
+            background: #fff3e0;
+        }
+
+        section {
+            background: #fce4ec;
+        }
+
+        aside {
+            background: #e0f7fa;
+        }
+
+        footer {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML Document Structure</h1>
+
+    <h2>Main rule</h2>
+    <p>Use semantic tags — important for SEO, accessibility, and developers.</p>
+
+    <h2>List of examples</h2>
+
+    <!-- Example 1: Basic structure -->
+    <div class="demo">
+        <h3>Example 1: Basic page structure</h3>
+        <header>
+            <h1>Site Logo</h1>
+            <p>Tagline or brief description</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <article>
+                <h2>Article Title</h2>
+                <p>Article content...</p>
+            </article>
+        </main>
+
+        <aside>
+            <h3>Sidebar</h3>
+            <p>Additional information</p>
+        </aside>
+
+        <footer>
+            <p>© 2026 My Website</p>
+            <p>Contact: email@example.com</p>
+        </footer>
+    </div>
+
+    <!-- Example 2: Nested section and article -->
+    <div class="demo">
+        <h3>Example 2: Blog (article inside section)</h3>
+        <main>
+            <section>
+                <h2>Latest Articles</h2>
+                <article>
+                    <h3>How to Learn HTML</h3>
+                    <p>Tips for beginners...</p>
+                </article>
+                <article>
+                    <h3>CSS Grid in 2026</h3>
+                    <p>New features...</p>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <!-- Example 3: Bad structure (div instead of semantics) -->
+    <div class="demo">
+        <h3>Example 3: HOW NOT TO DO IT (div soup)</h3>
+        <div class="header">
+            <div class="logo">Logo</div>
+        </div>
+        <div class="navigation">
+            <div class="menu">Menu</div>
+        </div>
+        <div class="content">
+            <div class="post">Post</div>
+        </div>
+        <p><strong>Problem:</strong> No semantics, bad for SEO and screen readers.</p>
+    </div>
+
+    <!-- Example 4: Proper heading hierarchy -->
+    <div class="demo">
+        <h3>Example 4: h1-h6 Hierarchy (important!)</h3>
+        <main>
+            <h1>Website Name (only one h1 per page!)</h1>
+
+            <section>
+                <h2>Section 1 (h2)</h2>
+                <article>
+                    <h3>Subsection 1.1 (h3)</h3>
+                    <p>Text...</p>
+                </article>
+            </section>
+
+            <section>
+                <h2>Section 2 (h2)</h2>
+                <p>Text...</p>
+            </section>
+        </main>
+        <p><strong>Rule:</strong> Don't skip heading levels (don't go h1 → h3)</p>
+    </div>
+</body>
+
+</html>
