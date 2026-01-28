@@ -14,4 +14,3 @@
 - `<title>My page</title>` — is the title of a tab/window. Important for **SEO** and **UX**. It should be clear.
 - `<meta name="description" content="...">` — A **short description** of the page. It is often shown in Google search results.
 - `<link rel="icon" href="/favicon.ico" type="image/x-icon" />` - Adding a website icon that is displayed on a tab and in bookmarks.
-- `<link rel="stylesheet" href="./"`
