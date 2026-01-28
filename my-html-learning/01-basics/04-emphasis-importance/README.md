@@ -2,7 +2,7 @@
 
 # Emphasis and Importance in the text
 
-## The main rule:
+## The main rule
 
 **Semantics is more important than appearance.** Choose tags based on their meaning, not their appearance.
 

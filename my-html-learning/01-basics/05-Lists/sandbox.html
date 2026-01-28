@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox: Lists in HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+
+        .demo {
+            border-left: 4px solid green;
+            padding: 0 0 0 15px;
+            margin: 25px 0;
+        }
+
+        dl dt {
+            font-weight: bold;
+        }
+
+        dl dd {
+            margin: 0 0 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Three Types of HTML Lists</h1>
+
+    <!-- UNORDERED LIST -->
+    <div class="demo">
+        <h2>1. &lt;ul&gt; — Unordered List (bullets)</h2>
+        <p><strong>When:</strong> order doesn't matter (shopping list)</p>
+
+        <h3>Example:</h3>
+        <ul>
+            <li>Milk</li>
+            <li>Eggs</li>
+            <li>Bread</li>
+            <li>Hummus</li>
+        </ul>
+    </div>
+
+    <!-- ORDERED LIST -->
+    <div class="demo">
+        <h2>2. &lt;ol&gt; — Ordered List (numbers)</h2>
+        <p><strong>When:</strong> order matters (instructions, recipes)</p>
+
+        <h3>Example:</h3>
+        <ol>
+            <li>Drive to the end of the road</li>
+            <li>Turn right</li>
+            <li>Go straight through two roundabouts</li>
+            <li>Turn left at the third roundabout</li>
+        </ol>
+    </div>
+
+    <!-- DESCRIPTION LIST -->
+    <div class="demo">
+        <h2>3. &lt;dl&gt; — Description List (terms)</h2>
+        <p><strong>When:</strong> terms and their definitions</p>
+
+        <h3>Example:</h3>
+        <dl>
+            <dt>Soliloquy</dt>
+            <dd>In drama, when a character speaks to themselves, expressing inner thoughts.</dd>
+
+            <dt>Monologue</dt>
+            <dd>When a character speaks their thoughts aloud for the audience.</dd>
+
+            <dt>Aside</dt>
+            <dd>A comment only for the audience (humor or drama).</dd>
+            <dd>Also: additional information alongside main content.</dd>
+        </dl>
+    </div>
+
+    <!-- NESTED LISTS -->
+    <div class="demo">
+        <h2>4. Nested Lists</h2>
+        <p>You can nest one list inside another</p>
+
+        <ol>
+            <li>Remove garlic skin, chop coarsely</li>
+            <li>Remove pepper seeds, chop coarsely</li>
+            <li>Add all ingredients to food processor</li>
+            <li>
+                Process into paste:
+                <ul>
+                    <li>For coarse "chunky" hummus — process briefly</li>
+                    <li>For smooth hummus — process longer</li>
+                </ul>
+            </li>
+        </ol>
+
+        <p><strong>Important:</strong> Close nested list before closing parent &lt;li&gt;</p>
+    </div>
+</body>
+
+</html>
