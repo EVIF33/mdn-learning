@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox: Headings and paragraphs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .bad {
+            color: red;
+        }
+
+        .good {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CORRECT STRUCTURE -->
+    <h1 class="good">Main page title (H1)</h1>
+    <p class="good">There should be only one per page</p>
+
+    <h2 class="good">Section 1 (H2)</h2>
+    <p class="good">The first major section</p>
+
+    <h3 class="good">Subsection 1.1 (H3)</h3>
+    <p class="good">Deeper level</p>
+
+    <h2 class="good">Section 2 (H2)</h2>
+    <p class="good">The second major section</p>
+
+    <!-- INCORRECT STRUCTURE -->
+    <h2 class="bad">What NOT to do:</h2>
+    <h1 class="bad">Another H1</h1>
+    <p class="bad">There should be only one H1 on the page</p>
+
+    <h3 class="bad">Skipped H2</h3>
+    <p class="bad">You cannot switch from H1 to H3 immediately</p>
+
+    <!-- SEMANTICS vs VISUAL -->
+    <h2>Semantics ≠ Appearance</h2>
+    <h3>This is an H3 (level 3 semantic header)</h3>
+    <span style="font-size: 32px; font-weight: bold;">It's a span, but it looks like an H1</span>>
+    <p>Visually the same, but semantically differnt</p>
+
+    <!-- CHECKING YOURSELF -->
+    <h2>Check yourself:</h2>
+    <ul>
+        <li>Open DevTools (F12) → Elements</li>
+        <li>Find everything &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;</li>
+        <li>Check if there are any missing levels</li>
+        <li>Check if there is only one &lt;h1&gt;</li>
+    </ul>
+
+</body>
+
+</html>
