@@ -1,0 +1,44 @@
+/my-html-learning/
+├── 01-basics/
+│   ├── basic-html-syntax/
+│   ├── webpage-metadata/
+│   ├── headings-paragraphs/
+│   ├── emphasis-importance/
+│   └── lists/
+├── 02-text-practice/
+│   ├── html-text-basics-test/
+│   ├── advanced-text-features/
+│   └── advanced-html-text-test/
+├── 03-page-structure/
+│   ├── structuring-documents/
+│   ├── creating-links/
+│   └── links-test/
+├── 04-media-content/
+│   ├── images/
+│   ├── images-test/
+│   ├── video-audio/
+│   └── audio-video-test/
+├── 05-tables-forms/
+│   ├── table-basics/
+│   ├── table-accessibility/
+│   ├── forms-buttons/
+│   └── forms-buttons-test/
+├── 06-advanced-topics/
+│   ├── debugging-html/
+│   ├── html-tests-index/
+│   ├── additional-tutorials/
+│   ├── vector-graphics/
+│   └── embedding-technologies/
+├── projects/
+│   ├── letter-markup/
+│   ├── bird-watching-site/
+│   ├── splash-page/
+│   ├── planet-data-table/
+│   └── feedback-form/
+└── practice-exercises/
+    ├── html-text-basics/
+    ├── advanced-html-text/
+    ├── links/
+    ├── images/
+    ├── audio-video/
+    └── forms-buttons/
