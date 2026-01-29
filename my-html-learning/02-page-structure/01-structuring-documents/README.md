@@ -1,3 +1,5 @@
+*The summary is based on the study of MDN (Mozilla Developer Network) materials*
+
 # Structuring HTML Documents
 
 ## Main rule

@@ -1,3 +1,5 @@
+*The summary is based on the study of MDN (Mozilla Developer Network) materials*
+
 # Creating Hyperlinks
 
 ## Main rule
@@ -43,7 +45,7 @@ A hyperlink (`<a>` element) connect web pages. It's the fundamental building blo
 ## Rules for work
 
 - Descriptive text: "Read our privacy policy" not "click here".
-- External links: Always add `rel="noonpener"` with `target="blank"`.
+- External links: Always add `rel="noopener noreferrer"` with `target="_blank"`.
 - Navigation: Use semantic `<nav>` with `<ul><li>` structure.
 - Accessibility: 
     - Add title for complex links.
