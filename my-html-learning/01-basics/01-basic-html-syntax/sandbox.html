@@ -1,35 +1,42 @@
 <!doctype html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <title>My first sandbox page</title>
-    </head>
-    <body>
-        <p>Create my first <strong>HTML</strong> element</p>
-        <hr>
-        <section>Create my first <em>void</em> element:
-            <img src="./source/void.jpg" style="display: block;"/>
-            <p>I added the <code>{style display: block}</code> to move the image to a new line.</p>
-        </section>
-        <hr>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My first sandbox page</title>
+</head>
+
+<body>
+    <main>
+        <h1>Create my first <strong>HTML</strong> element!</h1>
+
         <section>
-            <p>Some attributes for void element:</p>
-            <img src="./source/void.jpg" alt="Void element" width="600" height="600">
+            <h2>Create my first <em>void</em> element:</h2>
+            <img src="source/void.jpg" width="300" height="300">
         </section>
-        <hr>
+
         <section>
-            <p>Some <em>boolean</em> attributes:</p>
+            <h2>Some attributes for void element:</h2>
+            <code>&lt;img src="source/void.jpg" alt="Void element" width="600" height="600"&gt;</code>
+            <img src="source/void.jpg" alt="Void element" width="400" height="400">
+        </section>
+
+        <section>
+            <h2>Some <em>boolean</em> attributes:</h2>
             <input type="checkbox" checked>
             <input type="checkbox" checked="checked">
             <input type="checkbox" checked="">
             <input type="checkbox" checked="false"> <!--It's still true. -->
             <button disabled>Disabled button</button>
         </section>
-
+        
         <section>
             <input type="checkbox">
             <button>Enabled button</button>
         </section>
-    </body>
-</html>
+    </main>
+</body>
 
+</html>
