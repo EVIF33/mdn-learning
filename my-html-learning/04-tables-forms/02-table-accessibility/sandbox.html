@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sandbox: Table Accessibility</title>
+</head>
+
+<body>
+    <h1>Table Accessibility for Screen Readers</h1>
+
+    <h2>Main rule: Every table must work with screen readers</h2>
+    <p>Screen readers announce tables differently. Without proper markup, users hear: "Table with 3 rows, 4 columns"
+        instead of meaningful data.</p>
+
+    <!-- Demo 1: With vs Without Caption -->
+    <div class="demo">
+        <h3>1. Table Caption: Context Matters</h3>
+
+        <h4>❌ Without caption:</h4>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Month</th>
+                    <th>Sales</th>
+                </tr>
+                <tr>
+                    <td>January</td>
+                    <td>$5,000</td>
+                </tr>
+            </table>
+        </div>
+        <div class="screen-reader-demo">
+            <strong>Screen reader says:</strong><br>
+            "Table with 2 rows and 2 columns"<br>
+            "Column 1: Month"<br>
+            "Column 2: Sales"<br>
+            "Row 1: January, $5,000"
+        </div>
+
+        <h4>✅ With caption:</h4>
+        <div class="table-container">
+            <table>
+                <caption>Monthly Sales Report - North Region</caption>
+                <tr>
+                    <th>Month</th>
+                    <th>Sales</th>
+                </tr>
+                <tr>
+                    <td>January</td>
+                    <td>$5,000</td>
+                </tr>
+            </table>
+        </div>
+        <div class="screen-reader-demo">
+            <strong>Screen reader says:</strong><br>
+            "Table: Monthly Sales Report - North Region"<br>
+            "Column 1: Month"<br>
+            "Column 2: Sales"<br>
+            "Row 1: January, $5,000"
+        </div>
+
+        <pre>
+            <code>&lt;table&gt;
+    &lt;caption&gt;<span class="highlight">Monthly Sales Report - North Region</span>&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Month&lt;/th&gt;
+        &lt;th&gt;Sales&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code>
+        </pre>
+    </div>
+
+    <!-- Demo 2: Scope Attribute -->
+    <div class="demo success">
+        <h3>2. Scope Attribute: Row vs Column Headers</h3>
+
+        <div class="table-container">
+            <table>
+                <caption>Product Inventory</caption>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Stock</th>
+                </tr>
+                <tr>
+                    <th scope="row">MacBook Pro</th>
+                    <td>Laptops</td>
+                    <td>$1,299</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <th scope="row">iPhone 15</th>
+                    <td>Phones</td>
+                    <td>$799</td>
+                    <td>42</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="screen-reader-demo">
+            <strong>Screen reader navigation:</strong><br>
+            "Table: Product Inventory"<br>
+            "Column 1: Product"<br>
+            "Column 2: Category"<br>
+            <strong>"Row 1: MacBook Pro"</strong><br>
+            "Category: Laptops"<br>
+            "Price: $1,299"<br>
+            "Stock: 15"
+        </div>
+
+        <pre>
+            <code>&lt;tr&gt;
+    &lt;th <span class="highlight">scope="col"</span>&gt;Product&lt;/th&gt;  &lt;!-- Column header --&gt;
+    &lt;th <span class="highlight">scope="col"</span>&gt;Category&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;th <span class="highlight">scope="row"</span>&gt;MacBook Pro&lt;/th&gt;  &lt;!-- Row header --&gt;
+    &lt;td&gt;Laptops&lt;/td&gt;
+&lt;/tr&gt;</code>
+        </pre>
+    </div>
+
+    <!-- Demo 3: Complex Table with id/headers -->
+    <div class="demo">
+        <h3>3. Complex Tables: id and headers Attributes</h3>
+        <p>For tables with multiple header levels or merged cells:</p>
+
+        <div class="table-container">
+            <table>
+                <caption>Project Timeline 2024</caption>
+                <tr>
+                    <th id="project" rowspan="2">Project</th>
+                    <th id="q1" colspan="2">Q1</th>
+                    <th id="q2" colspan="2">Q2</th>
+                </tr>
+                <tr>
+                    <!-- Project header inherited from rowspan above -->
+                    <th id="q1-plan" headers="q1">Plan</th>
+                    <th id="q1-execute" headers="q1">Execute</th>
+                    <th id="q2-plan" headers="q2">Plan</th>
+                    <th id="q2-execute" headers="q2">Execute</th>
+                </tr>
+                <tr>
+                    <th id="web-app" headers="project">Web App</th>
+                    <td headers="web-app q1 q1-plan">Design</td>
+                    <td headers="web-app q1 q1-execute">Frontend</td>
+                    <td headers="web-app q2 q2-plan">Testing</td>
+                    <td headers="web-app q2 q2-execute">Launch</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="screen-reader-demo">
+            <strong>Screen reader says for "Testing" cell:</strong><br>
+            "Web App, Q2, Plan: Testing"
+        </div>
+
+        <pre>
+            <code>&lt;!-- Header with id --&gt;
+&lt;th <span class="highlight">id="web-app"</span> headers="project"&gt;Web App&lt;/th&gt;
+            
+&lt;!-- Data cell linked to headers --&gt;
+&lt;td <span class="highlight">headers="web-app q2 q2-plan"</span>&gt;Testing&lt;/td&gt;</code>
+        </pre>
+    </div>
+
+    <!-- Demo 4: Bad vs Good -->
+    <div class="demo warning">
+        <h3>4. ❌ Common Accessibility Failures</h3>
+
+        <h4>Bad: Missing scope</h4>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Name</th> <!-- ❌ Missing scope="col" -->
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>Alex</td>
+                    <td>alex@test.com</td>
+                </tr>
+            </table>
+        </div>
+        <div class="screen-reader-demo">
+            <strong>Screen reader confusion:</strong><br>
+            "Name" - Is this a column or row header?<br>
+            Reads cells without proper context
+        </div>
+
+        <h4>Bad: Layout table without role</h4>
+        <div class="table-container">
+            <table style="border: none;">
+                <tr>
+                    <td style="border: none; width: 30%;">
+                        <h3>Sidebar</h3>
+                        <ul>
+                            <li>Menu 1</li>
+                            <li>Menu 2</li>
+                        </ul>
+                    </td>
+                    <td style="border: none;">
+                        <h3>Main Content</h3>
+                        <p>Content here...</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="screen-reader-demo">
+            <strong>Screen reader says:</strong><br>
+            "Table with 1 row and 2 columns"<br>
+            "Cell: Sidebar, Menu 1, Menu 2"<br>
+            "Cell: Main Content, Content here..."<br>
+            <span style="color: #e74c3c;">⚠️ Confusing! This should be a layout, not a data table</span>
+        </div>
+
+        <pre>
+            <code>&lt;!-- Correct: Layout table --&gt;
+&lt;table <span class="highlight">role="presentation"</span>&gt;
+    &lt;!-- Screen reader ignores this table --&gt;
+&lt;/table&gt;</code>
+        </pre>
+    </div>
+
+    <!-- Demo 5: Semantic Sections -->
+    <div class="demo success">
+        <h3>5. Semantic Structure: thead, tbody, tfoot</h3>
+
+        <div class="table-container">
+            <table>
+                <caption>Annual Budget Summary</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Department</th>
+                        <th scope="col">Q1</th>
+                        <th scope="col">Q2</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Marketing</th>
+                        <td>$15,000</td>
+                        <td>$20,000</td>
+                        <td>$35,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Development</th>
+                        <td>$50,000</td>
+                        <td>$60,000</td>
+                        <td>$110,000</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th scope="row">Grand Total</th>
+                        <td>$65,000</td>
+                        <td>$80,000</td>
+                        <td>$145,000</td>
+                        </tbody>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="screen-reader-demo">
+            <strong>Screen reader navigation:</strong><br>
+            "Table: Annual Budget Summary"<br>
+            <strong>"Header section:"</strong><br>
+            "Column 1: Department"<br>
+            <strong>"Body section:"</strong><br>
+            "Row 1: Marketing"<br>
+            <strong>"Footer section:"</strong><br>
+            "Row: Grand Total"
+        </div>
+
+        <pre>
+            <code>&lt;table&gt;
+    &lt;caption&gt;...&lt;/caption&gt;
+                
+    <span class="highlight">&lt;thead&gt;</span>    &lt;!-- Header section --&gt;
+        &lt;tr&gt;...&lt;/tr&gt;
+    &lt;/thead&gt;
+                
+    <span class="highlight">&lt;tbody&gt;</span>    &lt;!-- Main data --&gt;
+        &lt;tr&gt;...&lt;/tr&gt;
+    &lt;/tbody&gt;
+                
+    <span class="highlight">&lt;tfoot&gt;</span>    &lt;!-- Summary --&gt;
+        &lt;tr&gt;...&lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code>
+        </pre>
+    </div>
+</body>
+
+</html>
